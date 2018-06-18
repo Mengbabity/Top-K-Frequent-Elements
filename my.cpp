@@ -6,7 +6,7 @@ public:
             return {0};
         map<int, int> m;
         vector<int> res;
-        vector<vector<int>> tmp(n,vector<int> {});
+        vector<vector<int>> tmp(n+1);  //开始设大小为n，报错。因为标号是个数，一个数字出现一次，放的还是tmp[1],所以是n+1
         
         for(int i=0;i<n;i++)
             m[nums[i]]++;
